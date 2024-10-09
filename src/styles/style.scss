@@ -1,0 +1,63 @@
+
+@import "_header.scss";
+@import "_footer.scss";
+@import "_gallery.scss";
+@import "_collapse.scss";
+
+
+/*** Général ***/
+* { font-family: 'Montserrat', sans-serif; }
+
+body {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    max-width: 1440px;
+}
+
+.cursor { cursor: pointer;}
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+
+    img {
+        height: 220px;
+        width: 100%;
+        border-radius: 20px;
+        margin: 20px 0;
+        object-fit: cover;
+        filter: brightness(50%);
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+        color: white;
+        font-weight: 700;
+        font-size: 48px;
+        position: absolute;
+    }
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .error-404 {
+        font-size: 150px;
+        color: #FF6060;
+    }
+    .error-txt {
+        color: #FF6060;
+        font-size: 36px;
+    }
+    .error-link {
+        text-decoration: underline;
+        color: black;
+        font-size: 18px;
+        padding: 40px 0;
+        cursor: pointer;
+    }
+}

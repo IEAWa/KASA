@@ -1,0 +1,164 @@
+@charset "UTF-8";
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 30px;
+}
+header .logo {
+  margin-left: 30px;
+}
+header .nav a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.footer {
+  height: 210px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.footer img {
+  height: 40px;
+}
+.footer p {
+  color: white;
+  padding: 10px 0;
+}
+
+.gallery {
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  margin: 40px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .card {
+  width: 29%;
+  margin: 25px 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.gallery .card .card-title {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+  padding: 5px 10px;
+}
+.gallery .card img {
+  height: 310px;
+  width: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+.collapse-container p {
+  padding-left: 10px;
+}
+
+.collapse-button {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff6060;
+}
+.collapse-button p {
+  padding: 10px 0 0 5px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin: inherit;
+}
+.collapse-button .arrow {
+  padding: 10px 10px 0 0;
+}
+
+.collapse-content {
+  height: 120px;
+  width: 80%;
+  border-radius: 0 0 5px 5px;
+  background-color: #F6F6F6;
+}
+.collapse-content p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/*** Général ***/
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  max-width: 1440px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+.banner img {
+  height: 220px;
+  width: 100%;
+  border-radius: 20px;
+  margin: 20px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(50%);
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.banner h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 48px;
+  position: absolute;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.error .error-404 {
+  font-size: 150px;
+  color: #FF6060;
+}
+.error .error-txt {
+  color: #FF6060;
+  font-size: 36px;
+}
+.error .error-link {
+  text-decoration: underline;
+  color: black;
+  font-size: 18px;
+  padding: 40px 0;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

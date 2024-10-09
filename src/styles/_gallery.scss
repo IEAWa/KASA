@@ -1,0 +1,31 @@
+
+
+.gallery {
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    margin: 40px 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        width: 29%;
+        margin: 25px 20px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        .card-title {
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            position: absolute;
+            padding: 5px 10px;
+        }
+        img {
+            height: 310px;
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+    }
+}
