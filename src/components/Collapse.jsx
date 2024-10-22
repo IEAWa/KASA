@@ -10,10 +10,10 @@ function Collapse({title, content, id}) {
     return (
         <div>
             <div className='collapse-container' key={id} >
-                <button className='collapse-button cursor' onClick={() => setVisible(true) }>
+                <button className='collapse-button cursor' onClick={() => setVisible(!visible) }>
                     <p>{title}</p>
-                    <img src={image} className='arrow' alt='arrow'></img>
-                </button>  
+                     <img src={image} alt='arrow'  className={visible ?'arrow arrow-up' : 'arrow arrow-down'}></img>
+                </button> 
                 {visible && <div className='collapse-content'>
                    <p>{content}</p>
                 </div>}

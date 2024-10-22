@@ -1,4 +1,5 @@
 
+
 .collapse-container {
     display: flex;
     flex-direction: column;
@@ -24,8 +25,15 @@
         color: white;
         margin: inherit;
     }
-    .arrow {
+    .arrow{
         padding: 10px 10px 0 0;
+    }
+    .arrow-down .arrow{
+        transform: rotate(0);
+        transition: transform 300ms ease-in;
+    }
+    .collapse-button:active >.arrow-up .arrow{
+        transform: rotate(180deg);
     }
 }
 
@@ -38,4 +46,8 @@
         font-weight: 400;
         font-size: 18px;
     }
+}
+
+.logement-collapse {
+    display: flex;
 }

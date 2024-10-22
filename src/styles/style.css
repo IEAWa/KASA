@@ -10,8 +10,8 @@ header .logo {
 }
 header .nav a {
   color: black;
-  font-size: 20px;
   text-decoration: none;
+  font-size: 20px;
   padding-right: 50px;
 }
 
@@ -22,7 +22,7 @@ header .nav a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 150px;
 }
 .footer img {
   height: 40px;
@@ -90,6 +90,13 @@ header .nav a {
 .collapse-button .arrow {
   padding: 10px 10px 0 0;
 }
+.collapse-button .arrow-down .arrow {
+  transform: rotate(0);
+  transition: transform 300ms ease-in;
+}
+.collapse-button .collapse-button:active > .arrow-up .arrow {
+  transform: rotate(180deg);
+}
 
 .collapse-content {
   height: 120px;
@@ -99,6 +106,34 @@ header .nav a {
 }
 .collapse-content p {
   font-weight: 400;
+  font-size: 18px;
+}
+
+.logement-collapse {
+  display: flex;
+}
+
+.carousel {
+  height: 410px;
+  margin: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rental-info {
+  margin-left: 20px;
+}
+.rental-info h2 {
+  font-weight: 500;
+  font-size: 36px;
+  color: #FF6060;
+}
+.rental-info .location {
+  font-weight: 500;
   font-size: 18px;
 }
 
@@ -161,4 +196,8 @@ body {
   font-size: 18px;
   padding: 40px 0;
   cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
