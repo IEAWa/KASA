@@ -2,11 +2,11 @@
 
 .carousel {
     height: 410px;
-    margin: 20px 30px;
+    margin: 30px 30px 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

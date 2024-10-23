@@ -1,8 +1,19 @@
 
 .rental-info {
-    margin-left: 20px;
+    margin: 0 30px;
 
+    .rental-title-host {
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+.rental-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     h2 {
+        margin: 20px 0 0 0;
         font-weight: 500;
         font-size: 36px;
         color: #FF6060;
@@ -10,5 +21,43 @@
     .location {
         font-weight: 500;
         font-size: 18px;
+        margin: 5px 0
+    }
+}
+
+.host-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 20px;
+
+    .host-name {
+        color: #FF6060;
+        font-weight: 500;
+        font-size: 18px;
+        padding-right: 20px;
+    }
+    .host-pic {
+        height: 64px;
+        border-radius: 50%;
+    }
+}
+
+.tags-rate {
+    display: flex;
+    justify-content: space-between;
+    
+    .tags {
+        display: flex;
+        margin: 10px 0
+    }
+    .tag {
+        margin: 0 10px 0 0;
+        padding: 4px 25px;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+        background-color: #FF6060;
+        border-radius: 10px;
     }
 }

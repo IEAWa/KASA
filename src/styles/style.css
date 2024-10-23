@@ -66,6 +66,7 @@ header .nav a {
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
+  width: 80%;
 }
 .collapse-container p {
   padding-left: 10px;
@@ -75,7 +76,7 @@ header .nav a {
   display: flex;
   justify-content: space-between;
   height: 52px;
-  width: 80%;
+  width: 100%;
   border-radius: 5px;
   border: none;
   background-color: #ff6060;
@@ -87,20 +88,18 @@ header .nav a {
   color: white;
   margin: inherit;
 }
-.collapse-button .arrow {
+.collapse-button .arrow-down {
   padding: 10px 10px 0 0;
-}
-.collapse-button .arrow-down .arrow {
   transform: rotate(0);
-  transition: transform 300ms ease-in;
+  transition: transform 100ms ease-in;
 }
-.collapse-button .collapse-button:active > .arrow-up .arrow {
+.collapse-button .arrow-up {
+  padding: 10px 10px 7px 10px;
   transform: rotate(180deg);
 }
 
 .collapse-content {
   height: 120px;
-  width: 80%;
   border-radius: 0 0 5px 5px;
   background-color: #F6F6F6;
 }
@@ -111,30 +110,89 @@ header .nav a {
 
 .logement-collapse {
   display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+.logement-collapse .logement-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  width: 47%;
+}
+.logement-collapse .logement-container p {
+  padding-left: 10px;
 }
 
 .carousel {
   height: 410px;
-  margin: 20px 30px;
+  margin: 30px 30px 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .rental-info {
-  margin-left: 20px;
+  margin: 0 30px;
 }
-.rental-info h2 {
+.rental-info .rental-title-host {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rental-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.rental-title h2 {
+  margin: 20px 0 0 0;
   font-weight: 500;
   font-size: 36px;
   color: #FF6060;
 }
-.rental-info .location {
+.rental-title .location {
   font-weight: 500;
   font-size: 18px;
+  margin: 5px 0;
+}
+
+.host-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 20px;
+}
+.host-profile .host-name {
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 18px;
+  padding-right: 20px;
+}
+.host-profile .host-pic {
+  height: 64px;
+  border-radius: 50%;
+}
+
+.tags-rate {
+  display: flex;
+  justify-content: space-between;
+}
+.tags-rate .tags {
+  display: flex;
+  margin: 10px 0;
+}
+.tags-rate .tag {
+  margin: 0 10px 0 0;
+  padding: 4px 25px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  background-color: #FF6060;
+  border-radius: 10px;
 }
 
 /*** Général ***/
