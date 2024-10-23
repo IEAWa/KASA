@@ -6,8 +6,8 @@ import logo from '../images/LOGO.png';
 
 function Header() {
     const location = useLocation();
-    const aproposClass = location.pathname.includes('/Apropos') ? 'underline' : '';
-    const homeClass = location.pathname.includes('/') ? 'underline' : '';
+    let homeClass = location.pathname === '/' ? 'underline' : '';
+    let aproposClass = location.pathname.includes('/Apropos') ? 'underline' : '';
     return (
     <header>
         <div className="logo">

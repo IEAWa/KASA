@@ -3,6 +3,7 @@
 .collapse-container {
     display: flex;
     flex-direction: column;
+    justify-self: center;
     align-items: center;
     margin: 20px 0;
     width: 80%;
@@ -29,8 +30,7 @@
     }
     .arrow-down{
         padding: 10px 10px 0 0;
-        transform: rotate(0);
-        transition: transform 100ms ease-in;
+        transition: transform 150ms ease-in;
     }
     .arrow-up{
         padding: 10px 10px 7px 10px;
@@ -51,16 +51,15 @@
 .logement-collapse {
     display: flex;
     justify-content: space-between;
-    margin: 0 30px;
+    margin: 0 70px;
 
     .logement-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     margin: 20px 0;
     width: 47%;
-    p {
-        padding-left: 10px;
+        p {
+            padding-left: 10px;
+        }
     }
-}
 }

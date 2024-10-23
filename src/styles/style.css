@@ -6,13 +6,16 @@ header {
   margin: 20px 30px;
 }
 header .logo {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 header .nav a {
   color: black;
   text-decoration: none;
   font-size: 20px;
   padding-right: 50px;
+}
+header .nav .underline {
+  text-decoration: underline;
 }
 
 .footer {
@@ -22,7 +25,7 @@ header .nav a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .footer img {
   height: 40px;
@@ -51,6 +54,7 @@ header .nav a {
   font-weight: 700;
   font-size: 18px;
   position: absolute;
+  z-index: 1;
   padding: 5px 10px;
 }
 .gallery .card img {
@@ -60,10 +64,22 @@ header .nav a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.gallery .card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  border-radius: 20px;
+  pointer-events: none;
+}
 
 .collapse-container {
   display: flex;
   flex-direction: column;
+  justify-self: center;
   align-items: center;
   margin: 20px 0;
   width: 80%;
@@ -90,8 +106,7 @@ header .nav a {
 }
 .collapse-button .arrow-down {
   padding: 10px 10px 0 0;
-  transform: rotate(0);
-  transition: transform 100ms ease-in;
+  transition: transform 150ms ease-in;
 }
 .collapse-button .arrow-up {
   padding: 10px 10px 7px 10px;
@@ -111,12 +126,11 @@ header .nav a {
 .logement-collapse {
   display: flex;
   justify-content: space-between;
-  margin: 0 30px;
+  margin: 0 70px;
 }
 .logement-collapse .logement-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   margin: 20px 0;
   width: 47%;
 }
@@ -126,7 +140,7 @@ header .nav a {
 
 .carousel {
   height: 410px;
-  margin: 30px 30px 10px 30px;
+  margin: 30px 70px 10px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,7 +150,7 @@ header .nav a {
 }
 
 .rental-info {
-  margin: 0 30px;
+  margin: 0 70px;
 }
 .rental-info .rental-title-host {
   display: flex;
@@ -256,6 +270,6 @@ body {
   cursor: pointer;
 }
 
-.underline {
-  text-decoration: underline;
+.no-underline {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

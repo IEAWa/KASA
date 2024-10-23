@@ -19,6 +19,7 @@
             font-weight: 700;
             font-size: 18px;
             position: absolute;
+            z-index: 1;
             padding: 5px 10px;
         }
         img {
@@ -27,5 +28,17 @@
             border-radius: 20px;
             object-fit: cover;
         }
+    }
+
+    .card::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        border-radius: 20px;
+        pointer-events: none;
     }
 }

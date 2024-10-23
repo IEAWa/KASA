@@ -52,8 +52,8 @@ function Logement() {
           <div className='rating'>
               {range.map((star, index) => ( 
               note >= star ? 
-              (<img src={emptystar} alt='empty-star' ></img>) :  
-              (<img src={fullstar} alt='full-star' ></img>)
+               (<img src={fullstar} alt='full-star' ></img>):  
+              (<img src={emptystar} alt='empty-star' ></img>)
               ))}
           </div>
         </div>
