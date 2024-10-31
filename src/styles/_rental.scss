@@ -1,10 +1,23 @@
 
 .rental-info {
     margin: 0 70px;
-
-    .rental-title-host {
     display: flex;
     justify-content: space-between;
+
+    .rental-title-tags {
+        .tags {
+            display: flex;
+            margin: 20px 0 10px 0;
+        }
+        .tag {
+            margin: 0 10px 0 0;
+            padding: 4px 25px;
+            font-weight: 700;
+            font-size: 14px;
+            color: white;
+            background-color: #FF6060;
+            border-radius: 10px;
+        }
     }
 }
 
@@ -25,11 +38,25 @@
     }
 }
 
+.equipment {
+    padding-bottom: 3px;
+    list-style-type: none; 
+}
+
+.host-rate {
+    .rate {
+        .rating {
+           display: flex;
+        flex-wrap: nowrap; 
+        }
+    }
+}
+
 .host-profile {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 10px 20px;
+    margin: 20px 20px 10px 20px;
 
     .host-name {
         color: #FF6060;
@@ -43,21 +70,3 @@
     }
 }
 
-.tags-rate {
-    display: flex;
-    justify-content: space-between;
-    
-    .tags {
-        display: flex;
-        margin: 10px 0
-    }
-    .tag {
-        margin: 0 10px 0 0;
-        padding: 4px 25px;
-        font-weight: 700;
-        font-size: 14px;
-        color: white;
-        background-color: #FF6060;
-        border-radius: 10px;
-    }
-}

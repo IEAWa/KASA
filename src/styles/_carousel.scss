@@ -1,12 +1,27 @@
 
-
 .carousel {
     height: 410px;
     margin: 30px 70px 10px 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 25px;
     padding: 0 15px;
     background-size: cover;
-    background-position: center;
+    background-position: center; 
+    position: relative;
+    .arrow-left {
+        position: absolute;
+        top: 150px;
+    }
+    .arrow-right {
+        position: absolute;
+        top: 150px;
+        right: 15px;
+    }
+    .slideCounter {
+        font-weight: 500;
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+    }
 }
+

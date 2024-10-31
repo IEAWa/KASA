@@ -12,6 +12,7 @@ header .nav a {
   color: black;
   text-decoration: none;
   font-size: 20px;
+  font-weight: 500;
   padding-right: 50px;
 }
 header .nav .underline {
@@ -25,7 +26,7 @@ header .nav .underline {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .footer img {
   height: 40px;
@@ -91,36 +92,38 @@ header .nav .underline {
 .collapse-button {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 52px;
   width: 100%;
   border-radius: 5px;
+  padding: 0 10px;
   border: none;
   background-color: #ff6060;
 }
 .collapse-button p {
-  padding: 10px 0 0 5px;
   font-weight: 700;
   font-size: 24px;
   color: white;
-  margin: inherit;
 }
 .collapse-button .arrow-down {
-  padding: 10px 10px 0 0;
   transition: transform 150ms ease-in;
+  transform: rotate(0deg);
 }
 .collapse-button .arrow-up {
-  padding: 10px 10px 7px 10px;
   transform: rotate(180deg);
+  transition: transform 150ms ease-in;
 }
 
 .collapse-content {
   height: 120px;
   border-radius: 0 0 5px 5px;
   background-color: #F6F6F6;
+  transition: transform 300ms ease-in;
 }
 .collapse-content p {
   font-weight: 400;
   font-size: 18px;
+  padding: 0 20px 20px 20px;
 }
 
 .logement-collapse {
@@ -131,30 +134,53 @@ header .nav .underline {
 .logement-collapse .logement-container {
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
-  width: 47%;
-}
-.logement-collapse .logement-container p {
-  padding-left: 10px;
+  margin: 0;
+  width: 48%;
 }
 
 .carousel {
   height: 410px;
   margin: 30px 70px 10px 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 25px;
   padding: 0 15px;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+.carousel .arrow-left {
+  position: absolute;
+  top: 150px;
+}
+.carousel .arrow-right {
+  position: absolute;
+  top: 150px;
+  right: 15px;
+}
+.carousel .slideCounter {
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
 }
 
 .rental-info {
   margin: 0 70px;
-}
-.rental-info .rental-title-host {
   display: flex;
   justify-content: space-between;
+}
+.rental-info .rental-title-tags .tags {
+  display: flex;
+  margin: 20px 0 10px 0;
+}
+.rental-info .rental-title-tags .tag {
+  margin: 0 10px 0 0;
+  padding: 4px 25px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  background-color: #FF6060;
+  border-radius: 10px;
 }
 
 .rental-title {
@@ -174,11 +200,21 @@ header .nav .underline {
   margin: 5px 0;
 }
 
+.equipment {
+  padding-bottom: 3px;
+  list-style-type: none;
+}
+
+.host-rate .rate .rating {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .host-profile {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px 20px;
+  margin: 20px 20px 10px 20px;
 }
 .host-profile .host-name {
   color: #FF6060;
@@ -189,24 +225,6 @@ header .nav .underline {
 .host-profile .host-pic {
   height: 64px;
   border-radius: 50%;
-}
-
-.tags-rate {
-  display: flex;
-  justify-content: space-between;
-}
-.tags-rate .tags {
-  display: flex;
-  margin: 10px 0;
-}
-.tags-rate .tag {
-  margin: 0 10px 0 0;
-  padding: 4px 25px;
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
-  background-color: #FF6060;
-  border-radius: 10px;
 }
 
 /*** Général ***/
@@ -261,6 +279,8 @@ body {
 .error .error-txt {
   color: #FF6060;
   font-size: 36px;
+  font-weight: 500;
+  text-align: center;
 }
 .error .error-link {
   text-decoration: underline;
@@ -272,4 +292,169 @@ body {
 
 .no-underline {
   text-decoration: none;
+}
+
+/* responsive mobile */
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+  header {
+    margin: 10px 20px;
+  }
+  header .logo {
+    margin-left: 0px;
+  }
+  header .logo img {
+    height: 46px;
+    width: 145px;
+  }
+  header .nav a {
+    font-size: 12px;
+    padding-right: 0;
+    padding-left: 15px;
+    text-transform: uppercase;
+  }
+  .banner {
+    margin: 0px 20px;
+  }
+  .banner img {
+    height: 110px;
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: none;
+  }
+  .banner h1 {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  .gallery {
+    background-color: white;
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery .card {
+    width: 100%;
+    margin: 15px 20px;
+  }
+  .gallery .card img {
+    height: 255px;
+  }
+  .collapse-container {
+    margin: 20px 0;
+    width: 88%;
+  }
+  .collapse-button {
+    align-items: center;
+    height: 32px;
+  }
+  .collapse-button p {
+    padding: 0 0 0 5px;
+    font-size: 13px;
+  }
+  .collapse-button img {
+    width: 20px;
+    height: 20px;
+  }
+  .collapse-button .arrow-down {
+    padding: 5px 5px 0 0;
+  }
+  .collapse-button .arrow-up {
+    padding: 7px 5px 5px 5px;
+  }
+  .collapse-content {
+    height: 100px;
+  }
+  .collapse-content p {
+    font-size: 12px;
+  }
+  .carousel {
+    height: 250px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  .carousel .arrow-left {
+    top: 110px;
+    height: 24px;
+    width: 24px;
+  }
+  .carousel .arrow-right {
+    top: 110px;
+    height: 24px;
+    width: 24px;
+  }
+  .carousel .slideCounter {
+    display: none;
+  }
+  .logement-collapse {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .logement-collapse .logement-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+  }
+  .rental-info {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rental-info .rental-title-tags .tags {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .rental-info .rental-title-tags .tags .tag {
+    margin: 0 10px 7px 0;
+    padding: 4px 25px;
+    font-size: 10px;
+    border-radius: 5px;
+    flex: none;
+  }
+  .rental-info .host-rate {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .rental-info .host-rate img {
+    height: 18px;
+    width: 18px;
+  }
+  .rental-info .host-rate .rate {
+    align-self: center;
+  }
+  .rental-info .rental-title h2 {
+    margin: 0 0 0 0;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .rental-info .rental-title .location {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .rental-info .host-profile {
+    margin: 5px 5px;
+  }
+  .rental-info .host-profile .host-name {
+    font-size: 12px;
+    padding-right: 10px;
+    margin: auto;
+  }
+  .rental-info .host-profile .host-pic {
+    height: 32px;
+    width: 32px;
+  }
+  .rental-info .error .error-404 {
+    font-size: 96px;
+  }
+  .rental-info .error .error-txt {
+    font-size: 18px;
+  }
+  .rental-info .error .error-link {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

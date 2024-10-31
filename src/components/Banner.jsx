@@ -1,6 +1,6 @@
 
 import '../styles/style.css';
-
+import PropTypes from 'prop-types';
 
 function Banner({image, tagLine}) {
     return (
@@ -10,5 +10,11 @@ function Banner({image, tagLine}) {
         </div>
     )
 }
+
+Banner.propTypes = {
+    image: PropTypes.string,
+    tagLine: PropTypes.string,
+}
+ 
 
 export default Banner

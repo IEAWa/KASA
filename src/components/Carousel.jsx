@@ -8,21 +8,24 @@ function Carousel({imageCarousel}) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const length = imageCarousel.length;
       const handlePrevious = () => {
-        const index = currentSlide - 1;
+        let index = currentSlide - 1;
         setCurrentSlide(index < 0 ? length - 1 : index);
         };
         
     const handleNext = () => {
-        const index = currentSlide + 1;
+        let index = currentSlide + 1;
         setCurrentSlide(index >= length ? 0 : index);
     }; 
+    
+    let index = currentSlide + 1;
 
     return (
         <div>
             <section className='carousel' style={{backgroundImage: `url(${imageCarousel[currentSlide]})`}}>
                 <img src={arrowleft} className='arrow-left' alt='arrow-left' onClick={handlePrevious}></img>
                 <img src={arrowright} className='arrow-right' alt='arrow-right' onClick={handleNext}></img>
-            </section>
+                <span className='slideCounter'>{index}/{length}</span>     
+            </section>   
         </div>
     ) 
 }

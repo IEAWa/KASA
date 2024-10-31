@@ -54,6 +54,8 @@ body {
     .error-txt {
         color: #FF6060;
         font-size: 36px;
+        font-weight: 500;
+        text-align: center;
     }
     .error-link {
         text-decoration: underline;
@@ -68,3 +70,193 @@ body {
 .no-underline {
     text-decoration: none;
 }
+
+/* responsive mobile */
+
+@media screen and (max-width:768px) {
+
+body {
+    max-width: 768px;
+}
+header {
+    margin: 10px 20px;
+    .logo {
+        margin-left: 0px;
+        img {
+            height: 46px;
+            width: 145px;}   
+    }
+    .nav {
+        a {
+            font-size: 12px;
+            padding-right: 0;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }            
+    }
+}
+
+.banner {
+    margin:0px 20px;
+    img {
+        height: 110px;
+        width: 100%;
+        margin: 10px 0;
+        box-shadow: none;
+    }
+    h1 {
+        font-size: 24px;
+        padding-left: 20px;
+    }
+}
+
+.gallery {
+    background-color: white;
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        width: 100%;
+        margin: 15px 20px;
+
+        img {
+            height: 255px;
+        }
+    }
+}
+
+.collapse-container {
+    margin: 20px 0;
+    width: 88%;
+}
+
+.collapse-button {
+    align-items: center;
+    height: 32px;
+    p {
+        padding: 0 0 0 5px;
+        font-size: 13px;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    .arrow-down{
+        padding: 5px 5px 0 0;
+    }
+    .arrow-up{
+        padding: 7px 5px 5px 5px;
+    }
+}
+.collapse-content {
+    height: 100px;
+    p {
+        font-size: 12px;
+    }
+}
+
+.carousel {
+    height: 250px;
+    margin: 20px;
+    border-radius: 10px;
+    .arrow-left {
+        top: 110px;
+        height: 24px;
+        width: 24px;
+    }
+    .arrow-right {
+        top: 110px;
+        height: 24px;
+        width: 24px;
+    }
+    .slideCounter {
+        display: none;
+    }
+}
+
+.logement-collapse {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+
+    .logement-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+    }
+}
+
+
+.rental-info {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    .rental-title-tags {
+        .tags {
+            margin: 5px 0;
+            display: flex;
+            flex-wrap: wrap;
+            .tag {
+            margin: 0 10px 7px 0;
+            padding: 4px 25px;
+            font-size: 10px;
+            border-radius: 5px;
+            flex: none;
+        }
+    }
+}
+
+.host-rate {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    img {
+        height: 18px;
+        width: 18px;
+    }
+    .rate {
+        align-self: center;
+    }
+}
+
+.rental-title {
+    h2 {
+        margin: 0 0 0 0;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .location {
+        font-weight: 500;
+        font-size: 14px;
+    }
+}
+
+.host-profile {
+    margin: 5px 5px;
+    .host-name {
+        font-size: 12px;
+        padding-right: 10px;
+        margin: auto;
+    }
+    .host-pic {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+
+.error {
+    .error-404 {
+        font-size: 96px;
+    }
+    .error-txt {
+        font-size: 18px;
+    }
+    .error-link {
+        font-size: 14px;
+    }
+}
+
+}}

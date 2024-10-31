@@ -21,8 +21,8 @@ function Logement() {
     }, [idAccommodation]
     );
     const rental = dataCurrentLogement[0];
-    const equipement = rental.equipments.map((equipment) => <li>{equipment}</li>)
-    const tags = rental.tags.map((tag, index) => <div className='tag' key={`${tag}-${index}`}>{tag}</div>)
+    const equipements = rental.equipments.map((equipement, index) => <li key={index} className='equipment'>{equipement}</li>)
+    const tags = rental.tags.map((tag, index) => <div className='tag' key={index}>{tag}</div>)
     const [firstName, lastName] = rental.host.name.split(' ');
 
     //ratings
@@ -33,37 +33,37 @@ function Logement() {
     <Carousel imageCarousel = {imageCarousel} />
     <div className='rental-info'>
 
-      <div className='rental-title-host'>
+      <div className='rental-title-tags'>
         <div className='rental-title'>
           <h2>{rental.title}</h2>
           <p className='location'>{rental.location}</p>
         </div>
+        <div className='tags'>
+          {tags}
+        </div>
+      </div> 
+
+      <div className='host-rate'>        
         <div className='host-profile'>
           <p className='host-name'>{firstName}<br></br>{lastName}</p>
           <img src={rental.host.picture} className='host-pic' alt='host'></img>
         </div>
-      </div>
-
-      <div className='tags-rate'>
-        <div className='tags'>
-          {tags}
-        </div>
         <div className='rate'>
-          <div className='rating'>
-              {range.map((star, index) => ( 
-              note >= star ? 
-               (<img src={fullstar} alt='full-star' ></img>):  
-              (<img src={emptystar} alt='empty-star' ></img>)
-              ))}
+            <div className='rating'>
+                {range.map((star, index) => ( 
+                note >= star ? 
+                (<img src={fullstar} alt='full-star' key={index} ></img>):  
+                (<img src={emptystar} alt='empty-star' key={index} ></img>)
+                ))}
+            </div>
           </div>
-        </div>
       </div>
 
     </div>
 
       <div className='logement-collapse'>
         <Collapse title='Description'  content={rental.description}/>
-        <Collapse title='Equipements'  content={equipement}/>
+        <Collapse title='Equipements'  content={equipements}/>
       </div>
 
     <Footer /></div>)

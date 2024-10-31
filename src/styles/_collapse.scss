@@ -16,25 +16,26 @@
 .collapse-button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 52px;
     width: 100%;
     border-radius: 5px;
+    padding: 0 10px;
     border: none;
     background-color: #ff6060;
     p {
-        padding: 10px 0 0 5px;
         font-weight: 700;
         font-size: 24px;
-        color: white;
-        margin: inherit;
+        color: white
     }
+
     .arrow-down{
-        padding: 10px 10px 0 0;
         transition: transform 150ms ease-in;
+        transform: rotate(0deg);
     }
     .arrow-up{
-        padding: 10px 10px 7px 10px;
         transform: rotate(180deg);
+        transition: transform 150ms ease-in;
     }
 }
 
@@ -42,9 +43,11 @@
     height: 120px;
     border-radius: 0 0 5px 5px;
     background-color: #F6F6F6;
+    transition: transform 300ms ease-in;
     p {
         font-weight: 400;
         font-size: 18px;
+        padding: 0 20px 20px 20px;
     }
 }
 
@@ -56,10 +59,7 @@
     .logement-container {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
-    width: 47%;
-        p {
-            padding-left: 10px;
-        }
+    margin:  0;
+    width: 48%;
     }
 }
