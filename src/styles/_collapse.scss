@@ -40,10 +40,9 @@
 }
 
 .collapse-content {
-    height: 120px;
     border-radius: 0 0 5px 5px;
     background-color: #F6F6F6;
-    transition: transform 300ms ease-in;
+    transition: max-height 1s ease-in;
     p {
         font-weight: 400;
         font-size: 18px;
@@ -51,10 +50,11 @@
     }
 }
 
+
 .logement-collapse {
     display: flex;
     justify-content: space-between;
-    margin: 0 70px;
+    margin: 20px 70px;
 
     .logement-container {
     display: flex;

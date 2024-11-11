@@ -178,12 +178,12 @@ header {
 .logement-collapse {
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
+    margin: 15px 20px 0 20px;
+    gap: 25px;
 
     .logement-container {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
     width: 100%;
     }
 }

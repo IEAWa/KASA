@@ -115,10 +115,9 @@ header .nav .underline {
 }
 
 .collapse-content {
-  height: 120px;
   border-radius: 0 0 5px 5px;
   background-color: #F6F6F6;
-  transition: transform 300ms ease-in;
+  transition: max-height 1s ease-in;
 }
 .collapse-content p {
   font-weight: 400;
@@ -129,7 +128,7 @@ header .nav .underline {
 .logement-collapse {
   display: flex;
   justify-content: space-between;
-  margin: 0 70px;
+  margin: 20px 70px;
 }
 .logement-collapse .logement-container {
   display: flex;
@@ -390,12 +389,12 @@ body {
   .logement-collapse {
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
+    margin: 15px 20px 0 20px;
+    gap: 25px;
   }
   .logement-collapse .logement-container {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
     width: 100%;
   }
   .rental-info {
