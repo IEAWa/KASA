@@ -117,7 +117,6 @@ header .nav .underline {
 .collapse-content {
   border-radius: 0 0 5px 5px;
   background-color: #F6F6F6;
-  transition: max-height 1s ease-in;
 }
 .collapse-content p {
   font-weight: 400;
