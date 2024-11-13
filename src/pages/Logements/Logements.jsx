@@ -42,8 +42,10 @@ function Logement() {
     const range = [1, 2, 3, 4, 5];
     const note = rental.rating;
 
+
     return (<div><Header />
     <Carousel imageCarousel = {imageCarousel} />
+
     <div className='rental-info'>
 
       <div className='rental-title-tags'>

@@ -24,9 +24,11 @@ function Carousel({imageCarousel}) {
     return (
         <div>
             <section className='carousel' style={{backgroundImage: `url(${imageCarousel[currentSlide]})`}}>
+                { length > 1 && <>
                 <img src={arrowleft} className='arrow-left cursor' alt='arrow-left' onClick={handlePrevious}></img>
                 <img src={arrowright} className='arrow-right cursor' alt='arrow-right' onClick={handleNext}></img>
-                <span className='slideCounter'>{index}/{length}</span>     
+                <span className='slideCounter'>{index}/{length}</span> 
+                  </>  }
             </section>   
         </div>
     ) 

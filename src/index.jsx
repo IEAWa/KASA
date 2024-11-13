@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './index.css';
 import Home from './pages/Home/Home';
 import Apropos from './pages/Apropos/Apropos';
@@ -12,10 +12,10 @@ ReactDOM.render(
      <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Apropos" element={<Apropos />} />
-                <Route path="/Logements/:id" element={<Logements />} />
-                <Route path="*" element={<NotFound />} />
-                <Route path="/error" element={<NotFound />}/>
+                <Route path="/apropos" element={<Apropos />} />
+                <Route path="/logements/:id" element={<Logements />} />
+                <Route path="*" element={<Navigate replace to='/error' />} />
+                <Route path="/error" element={<NotFound/>}/>
             </Routes>
                   </Router>
   </React.StrictMode>,
