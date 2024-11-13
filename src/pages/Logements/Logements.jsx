@@ -7,7 +7,7 @@ import Carousel from '../../components/Carousel.jsx';
 import '../../styles/style.css';
 import emptystar from '../../images/empty-star.png';
 import fullstar from '../../images/full-star.png';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
@@ -15,6 +15,7 @@ function Logement() {
   // déclaration de l'état local pour gérer les images du carousel
     const [imageCarousel, setImageCarousel] = useState([]);
     const { id } = useParams(); // Récupération de l'ID via useParams
+    
     // filtrage de la liste des logements pour obtenir le logement correspondant à l'ID
     const dataCurrentLogement = accommodationList.filter(data => data.id === id);
 
@@ -24,6 +25,11 @@ function Logement() {
     }, [id]
     );
 
+   //redirection vers page d'erreur si le tableau est vide (aucun logement correspondant à l'id)
+    if (dataCurrentLogement.length === 0) {
+      return <Navigate to='/error' />
+    }
+
     const rental = dataCurrentLogement[0];
     // met la liste des équipements en une liste d'éléments <li>
     const equipements = rental.equipments.map((equipement, index) => <li key={index} className='equipment'>{equipement}</li>)
@@ -31,7 +37,6 @@ function Logement() {
     const tags = rental.tags.map((tag, index) => <div className='tag' key={index}>{tag}</div>)
 
     const [firstName, lastName] = rental.host.name.split(' ');
-
   
     //rating: configuration pour l'affichage des étoiles
     const range = [1, 2, 3, 4, 5];
