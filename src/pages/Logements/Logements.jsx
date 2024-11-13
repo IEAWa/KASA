@@ -12,20 +12,28 @@ import { useEffect, useState } from 'react';
 
 
 function Logement() {
+  // déclaration de l'état local pour gérer les images du carousel
     const [imageCarousel, setImageCarousel] = useState([]);
-    const idAccommodation = useParams('id').id;
-    const dataCurrentLogement = accommodationList.filter(data => data.id === idAccommodation);
+    const { id } = useParams(); // Récupération de l'ID via useParams
+    // filtrage de la liste des logements pour obtenir le logement correspondant à l'ID
+    const dataCurrentLogement = accommodationList.filter(data => data.id === id);
+
     useEffect(() => { 
-      const dataCurrentLogement = accommodationList.filter(data => data.id === idAccommodation);
-      setImageCarousel(dataCurrentLogement[0].pictures)
-    }, [idAccommodation]
+      const dataCurrentLogement = accommodationList.filter(data => data.id === id);
+      setImageCarousel(dataCurrentLogement[0].pictures) // Mise à jour de l'état 'imageCarousel' avec les photos du logement
+    }, [id]
     );
+
     const rental = dataCurrentLogement[0];
+    // met la liste des équipements en une liste d'éléments <li>
     const equipements = rental.equipments.map((equipement, index) => <li key={index} className='equipment'>{equipement}</li>)
+    // met des tags en éléments de div
     const tags = rental.tags.map((tag, index) => <div className='tag' key={index}>{tag}</div>)
+
     const [firstName, lastName] = rental.host.name.split(' ');
 
-    //ratings
+  
+    //rating: configuration pour l'affichage des étoiles
     const range = [1, 2, 3, 4, 5];
     const note = rental.rating;
 
